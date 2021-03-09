@@ -2,6 +2,8 @@ package domen;
 
 import java.util.Date;
 
+import javax.print.attribute.standard.DateTimeAtCompleted;
+
 public class KucnaHemija extends Artikal {
 
 	private Date rokTrajanja;
@@ -11,7 +13,8 @@ public class KucnaHemija extends Artikal {
 	}
 
 	public void setRokTrajanja(Date rokTrajanja) {
-		this.rokTrajanja = rokTrajanja;
+		if(rokTrajanja.after(new Date()))
+			this.rokTrajanja = rokTrajanja;
 	}
 	
 	@Override
