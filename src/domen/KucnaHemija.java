@@ -14,6 +14,11 @@ public class KucnaHemija extends Artikal {
 		this.rokTrajanja = rokTrajanja;
 	}
 	
+	@Override
+	public String toString() {
+		return String.format("Kunca hemija: %s : %d : %s : %f, %tD", getNaziv(), getSifra(), getOpis(), getKolicina(), getRokTrajanja());
+	}
+	
 	
 	
 }

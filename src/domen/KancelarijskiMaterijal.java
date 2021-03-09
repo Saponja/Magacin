@@ -7,5 +7,11 @@ public class KancelarijskiMaterijal extends Artikal {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public String toString() {
+		return String.format("Kancelarijski materijal: %s : %d : %s : %f", getNaziv(), getSifra(), getOpis(), getKolicina());
+	}
+	
+
 	
 }
