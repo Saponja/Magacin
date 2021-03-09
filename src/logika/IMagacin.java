@@ -6,6 +6,6 @@ public interface IMagacin {
 	
 	public void dodajArtikal(Artikal artikal);
 	public void izbaciArtikal(Artikal artikal);
-	public void pronadjiArtikal(int sifra);
+	public Artikal pronadjiArtikal(int sifra);
 
 }
