@@ -30,6 +30,7 @@ public class Magacin implements IMagacin {
 		
 		if(!artikli.contains(artikal))
 			throw new RuntimeException("Artikal ne postoji u trenutnoj listi artikala");
+
 		
 		artikli.remove(artikal);
 		
@@ -48,7 +49,11 @@ public class Magacin implements IMagacin {
 				rezultat = a;
 		}
 		
-		return rezultat;
+		if(rezultat == null)
+			throw new RuntimeException("Artikal sa datom sifrom ne postoji u listi");
+		else
+			return rezultat;
+
 		
 	}
 
